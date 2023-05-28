@@ -1,0 +1,1 @@
+c:/Users/deivi/Documents/Programacion/android-cam-to-pc/camenv/Scripts/python.exe c:/Users/deivi/Documents/Programacion/android-cam-to-pc/webcam.py

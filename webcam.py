@@ -15,8 +15,10 @@ class Video:
             frame = self.download()
             self.render(frame)
 
-            if cv2.waitKey(1) & 0xFF == ord('|'):
+            if cv2.waitKey(1) == 27:
                 break
+            # if cv2.waitKey(1) & 0xFF == ord('|'):
+                # break
 
         cv2.destroyAllWindows()
 
@@ -39,7 +41,19 @@ if __name__ == '__main__':
     # type in your cam ip
     # if you don't want to resize image leave
     # `img_width` and `img_height` at 0
-    url = 'http://192.168.1.19:6969/shot.jpg'
+    print("Selecciona un número:")
+    print("1) 153  2) 140  3) otro a introducir")
+    entrada = int(input())
+    print(entrada)
+    ip = 0
+    if entrada == 1:
+        ip = 153
+    elif entrada == 2:
+        ip = 128
+    elif entrada == 3:
+        ip = input("Introduce el endpoint: ")
+    url = 'http://192.168.1.'+str(ip)+':8080/shot.jpg'
+    print(url)
     img_width = 0
     img_height = 0
 
